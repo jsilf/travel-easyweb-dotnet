@@ -1,0 +1,89 @@
+// Welcome to glup.config.json, the configuration file for glup,
+// lines beginning with // are comments here, notation is otherwise json.
+//
+// These values should be relative to the path of this file,
+// includedFiles and filesToWatch follows gulp's wildcard notation, look it up.
+//
+// If css or js jobs is not needed for your project,
+// leave it empty, like: "cssJobs": []
+//
+// GLHF :)
+{
+    // Define one or many css jobs
+    "cssJobs": [
+        {
+            "name": "main",
+            "includedFiles": [
+                "css/css.scss"
+            ],
+            "targetFilePath": "css",
+            "targetFileName": "css.css",
+            "filesToWatch": [
+                "css/**/*.scss"
+            ],
+            "autoprefixer": {
+                "useCustomSetup": false,
+                "customSetupName": "standardSetup"
+            }
+        }
+    ],
+    // Define one or many js jobs
+    "jsJobs": [
+        {
+            "name": "main",
+            "includedFiles": [
+                "js/main.js"
+            ],
+            "targetFilePath": "js",
+            "targetFileName": "final.min.js",
+            "filesToWatch": [
+                "js/**/*.js"
+            ],
+            "jshint": {
+                "on": true,
+                "ignore": [
+                    "js/source/_plugins.js"
+                ],
+                "useCustomSetup": false,
+                "customSetupName": "standardSetup"
+            }
+        }
+    ],
+    // You can freely choose to name your setups inside jshintSetups
+    // what matters is that you use the same name at jsJobs[].jshint.customSetupName
+    "jshintSetups": {
+        "standardSetup": {
+            "node": false,
+            "browser": true,
+            "devel": true,
+            "bitwise": true,
+            "curly": false,
+            "eqeqeq": true,
+            "latedef": false,
+            "undef": true,
+            "unused": false,
+            "strict": false,
+            "maxcomplexity": 9,
+            "esversion": 5,
+            "globals": {
+                "jQuery": true,
+                "Modernizr": true,
+                "$": false
+            }
+        }
+    },
+    // You can freely choose to name your setups inside autoprefixerSetups
+    // what matters is that you use the same name at cssJobs[].autoprefixer.customSetupName
+    "autoprefixerSetups": {
+        "standardSetup": {
+            "customBrowsersList": [
+                "> 1%",
+                "IE > 8",
+                "Safari >= 5",
+                "Edge >= 13",
+                "Last 20 Chrome versions",
+                "Last 20 Firefox versions"
+            ]
+        }
+    }
+}

@@ -1,0 +1,51 @@
+<section class="standard position-relative" ew-for="booking">
+    <div class="content booking display-flex">
+        <div class="title-wrap">
+            <span id="flight">Flights</span>
+            <span id="stay">Stays</span>
+        </div>
+
+        <div data-flight class="booking-flights">
+            <label for="from">From - to</label>
+            <input name="from" type="text" placeholder="Istanbul, Turkey">
+            <label for="return">Trip</label>
+            <select name="return">
+                <option value="return">Return</option>
+                <option value="noReturn">No return</option>
+            </select>
+            <label for="to">Depart - return</label>
+            <input name="to" type="date">
+            <label for="passenger">Passenger - class</label>
+            <select name="amount">
+                <option value="return">1 Passenger - economy</option>
+                <option value="noReturn">2 Passengers - economy</option>
+            </select>
+
+            <div>
+                <p>Add promo code</p>
+                <button id="show-flights" class="btn btn-primary">Show Flights</button>
+            </div>
+        </div>
+
+        <div data-stay class="booking-stays">
+            <label>Enter destination</label>
+            <input type="text" placeholder="Istanbul, Turkey">
+
+            <label for="checkin">Check in</label>
+            <input name="checkin" type="date" placeholder="Fri 1/1">
+
+            <label for="checkout">Check out</label>
+            <input name="checkout" type="date" placeholder="Sun 3/1">
+
+            <select name="rooms">
+                <option value="">1 room, 2 guests</option>
+                <option value="">2 rooms, 2 guests</option>
+            </select>
+
+            <div>
+                <p>Add promo code</p>
+                <button id="show-stays" class="btn btn-primary">Show Places</button>
+            </div>
+        </div>
+    </div>
+</section>

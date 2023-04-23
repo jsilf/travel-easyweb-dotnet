@@ -1,0 +1,12 @@
+﻿<header>
+    <div class="inner">
+        <ew-template for-key="menu" />
+        <a class="logotype" href="/" ew-if-key="$settings/logotype-light">
+            <img ew-for-src="$settings/logotype-light" />
+        </a>
+        <div>
+            <a class="btn btn-transparent" ew-for-href="loginBtn">@Label("loginBtn")</a>
+            <a class="btn btn-white" ew-for-href="signUpBtn">@Label("signUpBtn")</a>
+        </div>
+    </div>
+</header>

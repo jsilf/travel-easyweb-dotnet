@@ -1,0 +1,37 @@
+.btn {
+  padding: 8px 30px;
+  color: $color-black;
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+  border-radius: 4px;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-primary {
+    background-color: $mint-color;
+  }
+
+  &-transparent {
+    color: $color-white;
+  }
+
+  &-dark {
+    color: $color-white;
+    background-color: $dark-green-color;
+    padding: 1rem;
+  }
+
+  &-white {
+    background-color: $color-white;
+    border-radius: 8px;
+  }
+
+  &-outline {
+    border: 1px solid $mint-color;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,17 @@
+<section class="standard">
+    <div class="content">
+        <div class="display-flex justify-between">
+            <div>
+                <h2 ew-for="heading"></h2>
+                <p ew-for="subHeading"></p>
+            </div>
+            <div>
+                <a class="btn btn-outline" ew-for-href="seeMoreBtn"><span>@Label("seeMoreBtn")</span></a>
+            </div>
+        </div>
+
+        <div class="card-wrap">
+            <ew-template for-key="city-list" />
+        </div>
+    </div>
+</section>

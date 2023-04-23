@@ -1,0 +1,46 @@
+﻿<footer>
+    <div class="inner">
+
+        <div class="footer-subscribe display-flex justify-between">
+            <div>
+                <h4 class="heading text-capitalize" ew-for="heading"> </h4>
+                <p class="sub-heading text-capitalize" ew-for="subHeading"></p>
+                <p class="ingress" ew-for="ingress"></p>
+                <div class="input-wrap">
+                    <input type="text" name="email" id="email" placeholder="Your email address">
+                    <button class="btn btn-dark" ew-for="subscribeBtn"></button>
+                </div>
+            </div>
+            <partial name="../SVG/_mailbox.cshtml" alt="Logo mailbox" />
+        </div>
+        <div class="footer-bottom display-flex justify-between">
+            <div>
+                <a class="logotype" href="/">
+                    <partial name="../SVG/_logo-footer.cshtml" alt="Logotype" />
+                </a>
+                <a href="#">
+                    <partial name="../SVG/_facebook.cshtml" alt="icon facebook" />
+                </a>
+                <a href="#">
+                    <partial name="../SVG/_twitter.cshtml" alt="icon twitter" />
+                </a>
+                <a href="#">
+                    <partial name="../SVG/_youtube.cshtml" alt="icon youtube" />
+                </a>
+                <a href="#">
+                    <partial name="../SVG/_instagram.cshtml" alt="icon instagram" />
+                </a>
+            </div>
+            <ew-list for-key="linkList">
+                <div class="link-list">
+                    <h5 class="heading" ew-for="heading"></h5>
+                    <ul ew-list="link">
+                        <li>
+                            <a ew-for-href="link">@Label("link")</a>
+                        </li>
+                    </ul>
+                </div>
+            </ew-list>
+        </div>
+    </div>
+</footer>

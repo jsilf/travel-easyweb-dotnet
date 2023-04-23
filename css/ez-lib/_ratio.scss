@@ -1,0 +1,33 @@
+/* ADD THIS LINE UNDER IN ALL FILES YOU WANT TO REACH VARIABLES AND MIXINS EASY */
+/// <reference path="ez.scss" />
+
+// HOW TO USE:
+// Create a parent div with class="aspect" and a style tag (style="--aspect-ratio: 4/3;") change the values based on your ratio
+
+$ratios: ((w: 16, h: 9,), (w: 9, h: 16 ), (w: 4, h: 3 ), (w: 3, h: 4));
+
+[style*="--aspect-ratio"] {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: calc( 100% / (var(--aspect-ratio)) );
+
+    > :first-child {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+@each $ratio in $ratios {
+    $w: map-get($ratio, w);
+    $h: map-get($ratio, h);
+
+    .aspect.ratio-#{$w}-#{$h} {
+        padding-top: $h / $w * 100%;
+    }
+}
+
