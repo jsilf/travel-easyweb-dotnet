@@ -1,17 +1,15 @@
 <ew-list for-key="$">
-
-    <a ew-for-href="$">
-        <article class="city-card">
-            <div class="image">
-                <img ew-for-src="image" />
-            </div>
-            <div class="card-text">
-                <p>@Article.Label</p>
-                <ul ew-list="tags">
-                    <li ew-for="$"></li>
-                </ul>
-            </div>
-        </article>
-    </a>
-
+  <a ew-for-href="$">
+    <article class="city-card">
+      <div class="image">
+        <img ew-for-src="image" />
+      </div>
+      <div class="card-text">
+        <p>@Article.Label</p>
+        <ul ew-list="tags">
+          <li ew-for="$"></li>
+        </ul>
+      </div>
+    </article>
+  </a>
 </ew-list>
